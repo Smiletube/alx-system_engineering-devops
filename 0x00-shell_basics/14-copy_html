@@ -1,8 +1,2 @@
 #!/bin/bash
-
-# Store the parent directory of the current working directory in a variable
-parent_dir="$(dirname "$(pwd)")"
-
-# Copy all HTML files from the current working directory to the parent directory,
-# but only if they are newer or if they do not exist in the parent directory
-find . -maxdepth 1 -name "*.html" -type f -newer "$parent_dir" -exec cp -n {} "$parent_dir" \;
+cp -un *.html ../
